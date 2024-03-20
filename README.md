@@ -1,19 +1,30 @@
-## Getting Started
+### Cliente:
+#### Atributos:
+- Nome
+- CPF
+- Saldo
+#### Métodos:
+- RealizarDeposito(valor)
+- RealizarSaque(valor)
+### Empresa:
+#### Atributos:
+- Nome
+- CNPJ
+- Saldo
+- Taxa de Sistema
+#### Métodos:
+- RealizarDepositoCliente(cliente, valor)
+- RealizarSaqueCliente(cliente, valor)
+- NotificarCliente(cliente, mensagem)
+- EnviarCallback(mensagem)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Funcionalidades:
+- Validação de CPF e CNPJ: Implementar funções para validar CPF e CNPJ.
 
-## Folder Structure
+- Taxa de Sistema: Ao realizar transações, a taxa de sistema deve ser deduzida do saldo da empresa.
 
-The workspace contains two folders by default, where:
+- Depósitos e Saques: As empresas podem realizar depósitos e saques para os clientes, desde que tenham saldo suficiente.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Notificações: Após cada transação, o cliente deve ser notificado. Isso pode ser feito por e-mail, SMS ou qualquer outro método de notificação.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-# teste_tgid
+- Callback: Após cada transação, a empresa deve receber um callback informando sobre a transação. Isso pode ser simulado usando um serviço como webhook.site.
