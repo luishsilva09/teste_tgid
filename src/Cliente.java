@@ -71,4 +71,8 @@ public class Cliente {
 
         return true;
     }
+
+    public String getNome() {
+        return this.nome;
+    }
 }
