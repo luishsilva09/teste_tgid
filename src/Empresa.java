@@ -84,11 +84,15 @@ public class Empresa {
     
         private void notificarCliente(Cliente cliente, String mensagem) {
             // Lógica para notificar o cliente por e-mail, SMS, etc.
-            // System.out.println("Notificando cliente " + cliente.getNome() + " - " + mensagem);
+            System.out.println("Notificando cliente " + cliente.getNome() + " - " + mensagem);
         }
     
         private void enviarCallback(String mensagem) {
             // Lógica para enviar o callback para a empresa
             System.out.println("Callback enviado para empresa " + nome + " - " + mensagem);
+        }
+
+        public double getSaldo() {
+            return this.saldo;
         }
     }
